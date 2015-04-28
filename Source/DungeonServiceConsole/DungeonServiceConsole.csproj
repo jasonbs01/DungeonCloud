@@ -7,7 +7,7 @@
     <ProjectGuid>{DD1B8178-0D89-4805-BD6F-6DB1A1FC1719}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CloudDungeon.DungeonServiceConsole</RootNamespace>
+    <RootNamespace>DungeonCloud.DungeonServiceConsole</RootNamespace>
     <AssemblyName>DungeonServiceConsole</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

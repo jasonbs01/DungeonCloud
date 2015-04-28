@@ -7,7 +7,7 @@
     <ProjectGuid>{231E5FF3-7F29-4304-B73D-BE2083B3B633}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CloudDungeon.DungeonService</RootNamespace>
+    <RootNamespace>DungeonCloud.DungeonService</RootNamespace>
     <AssemblyName>DungeonService</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -42,8 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DungeonService.cs" />
+    <Compile Include="Entities\DungeonConfigEntity.cs" />
     <Compile Include="IDungeonService.cs" />
+    <Compile Include="Services\DungeonDepot.cs" />
+    <Compile Include="Services\IdGenerator.cs" />
+    <Compile Include="Services\IDungeonDepot.cs" />
+    <Compile Include="Services\IIdGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ISeedGenerator.cs" />
+    <Compile Include="Services\SeedGenerator.cs" />
+    <Compile Include="TinyIoC.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DungeonCommon\DungeonCommon.csproj">
@@ -51,6 +59,10 @@
       <Name>DungeonCommon</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

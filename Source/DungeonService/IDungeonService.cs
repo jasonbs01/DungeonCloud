@@ -14,5 +14,12 @@ namespace DungeonCloud.DungeonService
         [OperationContract]
         Dungeon GetDungeon(string Id);
 
+        [OperationContract]
+        string CreateDungeon(DungeonConfig configuration);
+
+        //[OperationContract]
+        //string CreateDungeon(string config);
+
+
     }
 }

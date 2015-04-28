@@ -7,7 +7,7 @@
     <ProjectGuid>{B0304E36-FEF3-4E14-AD3A-848545F8B56E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CloudDungeon.DungeonCommon</RootNamespace>
+    <RootNamespace>DungeonCloud.DungeonCommon</RootNamespace>
     <AssemblyName>DungeonCommon</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContracts\Dimension.cs" />
     <Compile Include="DataContracts\Dungeon.cs" />
+    <Compile Include="DataContracts\DungeonConfig.cs" />
+    <Compile Include="DataContracts\Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
