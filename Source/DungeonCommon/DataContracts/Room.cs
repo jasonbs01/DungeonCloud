@@ -8,29 +8,22 @@ using System.Threading.Tasks;
 namespace DungeonCloud.DungeonCommon
 {
     [DataContract]
-    public class Dungeon
+    public class Room
     {
-        #region Constructors
-
-        public Dungeon(string name, int length, int width)
-        {            
+        public Room(string name, Position location, Dimension size)
+        {
             Name = name;
-            Size = new Dimension(length, width);
+            Location = location;
+            Size = size;
         }
-
-        #endregion
-
-        #region Public Properties
 
         [DataMember]
         public string Name { get; set; }
 
         [DataMember]
-        public Dimension Size { get; set; }
+        public Position Location { get; set; }
 
         [DataMember]
-        public Room[] Rooms { get; set; }
-                
-        #endregion
+        public Dimension Size { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DungeonCloud.DungeonCommon;
+using DungeonCloud.DungeonService.DepthFirstGenerator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,8 @@ namespace DungeonCloud.DungeonService
             
             //multi instance 
             container.Register<DungeonConfigEntity>().AsMultiInstance();
+            container.Register<IRandomizer, Randomizer>().AsMultiInstance();
+            container.Register<IDungeonGenerator, DungeonGeneratorDepthFirst>().AsMultiInstance();
         }
 
         #endregion 
@@ -52,8 +55,11 @@ namespace DungeonCloud.DungeonService
                 if (depot.ContainsKey(id))
                 {
                     DungeonConfigEntity dungeonConfig = depot[id];
+                    requestContainer.Register<DungeonConfigEntity>(dungeonConfig);
 
-                    result = new Dungeon(id, dungeonConfig.Size.Length, dungeonConfig.Size.Width);
+                    IDungeonGenerator generator = requestContainer.Resolve<IDungeonGenerator>();
+
+                    result = generator.Generate();
                 }
                 else if (id == _defaultId)
                 {

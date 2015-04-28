@@ -41,15 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DepthFirstGenerator\DungeonGeneratorDepthFirst.cs" />
     <Compile Include="DungeonService.cs" />
     <Compile Include="Entities\DungeonConfigEntity.cs" />
     <Compile Include="IDungeonService.cs" />
     <Compile Include="Services\DungeonDepot.cs" />
     <Compile Include="Services\IdGenerator.cs" />
     <Compile Include="Services\IDungeonDepot.cs" />
+    <Compile Include="Services\IDungeonGenerator.cs" />
     <Compile Include="Services\IIdGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IRandomizer.cs" />
     <Compile Include="Services\ISeedGenerator.cs" />
+    <Compile Include="Services\Randomizer.cs" />
     <Compile Include="Services\SeedGenerator.cs" />
     <Compile Include="TinyIoC.cs" />
   </ItemGroup>
