@@ -13,14 +13,14 @@ The goal of this project is to create a RESTful Roguelike dungeon generator. Wha
 #Basic API Usage 
 To create a new dungeon POST a dungeon configuration to the dungeons resource.  
 ```Batchfile
-curl -v -H "Content-Type: application/json" -X POST --data "@DungeonConfig.json" http://localhost:8080/DungeonCloud/Dungeons
+curl -v -H "Content-Type: application/json" -X POST --data "@DungeonConfig.json" http://localhost:8089/DungeonCloud/Dungeons
 ```
 
 A new id will be returned such as MyDungeon_1.
 
 Then to retrieve the dungeon generated from that config GET at the id url:
 ```Batchfile
-curl -v -H "Content-Type: application/json" -X GET http://localhost:8080/DungeonCloud/Dungeons/MyDungeon_1
+curl -v -H "Content-Type: application/json" -X GET http://localhost:8089/DungeonCloud/Dungeons/MyDungeon_1
 ```
 
 #Detailed Design
