@@ -7,26 +7,36 @@ using System.Threading.Tasks;
 
 namespace DungeonCloud.DungeonCommon
 {
+
     [DataContract]
-    public class Room
+    public enum Direction
     {
-        public Room(string name, Position location, Dimension size)
+        North,
+        West,
+        East,
+        South
+    }
+
+    [DataContract]
+    public class Door
+    {
+        public Door(string name, Direction wall, int position)
         {
             Name = name;
-            Location = location;
-            Size = size;
+            Wall = wall;
+            Position = position;
         }
 
         [DataMember]
         public string Name { get; set; }
 
         [DataMember]
-        public Position Location { get; set; }
+        public Direction Wall { get; set; }
 
         [DataMember]
-        public Dimension Size { get; set; }
+        public int Position { get; set; }
 
         [DataMember]
-        public Door[] Doors { get; set; }
+        public string ConnectedHallName { get; set; }
     }
 }

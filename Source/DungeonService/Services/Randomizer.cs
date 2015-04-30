@@ -38,5 +38,15 @@ namespace DungeonCloud.DungeonService
 
             return result;
         }
+
+        public int ChooseCount(int min, int max)
+        {
+            return _random.Next(min, max + 1);
+        }
+
+        public Direction ChooseDirection()
+        {
+            return (Direction)_random.Next((int)Direction.North, (int)Direction.East + 1);
+        }
     }
 }

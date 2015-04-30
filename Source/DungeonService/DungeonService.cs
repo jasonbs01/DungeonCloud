@@ -57,6 +57,7 @@ namespace DungeonCloud.DungeonService
                     DungeonConfigEntity dungeonConfig = depot[id];
                     requestContainer.Register<DungeonConfigEntity>(dungeonConfig);
 
+                    //TODO: Pull the generator by name stored in the config
                     IDungeonGenerator generator = requestContainer.Resolve<IDungeonGenerator>();
 
                     result = generator.Generate();

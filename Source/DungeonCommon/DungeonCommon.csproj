@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContracts\Dimension.cs" />
+    <Compile Include="DataContracts\Door.cs" />
     <Compile Include="DataContracts\Dungeon.cs" />
     <Compile Include="DataContracts\DungeonConfig.cs" />
+    <Compile Include="DataContracts\Hall.cs" />
     <Compile Include="DataContracts\Position.cs" />
     <Compile Include="DataContracts\Room.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

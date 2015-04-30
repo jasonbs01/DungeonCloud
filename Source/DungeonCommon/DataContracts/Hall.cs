@@ -8,25 +8,23 @@ using System.Threading.Tasks;
 namespace DungeonCloud.DungeonCommon
 {
     [DataContract]
-    public class Room
+    public class Hall
     {
-        public Room(string name, Position location, Dimension size)
+        public Hall(string name)
         {
             Name = name;
-            Location = location;
-            Size = size;
         }
 
         [DataMember]
         public string Name { get; set; }
 
         [DataMember]
-        public Position Location { get; set; }
+        public string StartRoomName { get; set; }
 
         [DataMember]
-        public Dimension Size { get; set; }
+        public string EndRoomName { get; set; }
 
         [DataMember]
-        public Door[] Doors { get; set; }
+        public Position[] Segments { get; set; }
     }
 }

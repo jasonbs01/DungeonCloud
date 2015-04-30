@@ -30,6 +30,9 @@ namespace DungeonCloud.DungeonCommon
 
         [DataMember]
         public Room[] Rooms { get; set; }
+
+        [DataMember]
+        public Hall[] Halls { get; set; }
                 
         #endregion
     }

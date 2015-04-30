@@ -14,5 +14,9 @@ namespace DungeonCloud.DungeonService
         Dimension ChooseDimension(int maxSize);
 
         Position ChoosePosition(int length, int width);
+
+        int ChooseCount(int min, int max);
+
+        Direction ChooseDirection();
     }
 }
